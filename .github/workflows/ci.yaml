@@ -1,3 +1,9 @@
+on:
+  push:
+
+    branches:
+      - master
+
 jobs:
   build-my-app:
     uses: bdtripp-organization/super-app-infra/.github/workflows/reusable-docker-build-and-push.yaml@master
