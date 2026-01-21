@@ -1,0 +1,7 @@
+jobs:
+  build-my-app:
+    uses: bdtripp-organization/super-app-infra/.github/workflows/reusable-docker-build-and-push.yaml@master
+    with:
+      image_name: "my-test-app2"     # This is passed to the template
+      dockerfile_path: "./Dockerfile" # This is passed to the template
+    secrets: inherit  # Passes necessary registry credentials securely
