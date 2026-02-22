@@ -6,8 +6,7 @@ services:
     labels:
       - "deunhealth.restart=true"
     environment:
-      - VIRTUAL_HOST=${SUBDOMAIN}
-      - VIRTUAL_PATH=/my-test-app2
+      - VIRTUAL_HOST=${FQDN}
     healthcheck:
       test: ["CMD-SHELL", "wget -q --spider http://localhost/ || exit 1"]
       interval: 30s
